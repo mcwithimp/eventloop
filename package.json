@@ -1,0 +1,15 @@
+{
+  "name": "eventloop",
+  "version": "1.0.0",
+  "main": "eventloop.js",
+  "scripts": {
+    "test": "mocha $(find . -name '*.test.js') --recursive -w"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mocha": "^7.1.1"
+  },
+  "devDependencies": {},
+  "description": ""
+}
