@@ -13,10 +13,10 @@ function test2() {
     setImmediate(function() {
       console.log("test4");
     });
-    delay();
+    // delay();
     console.log("test6");
   }, 0);
-  delay();
+  // delay();
   test3();
 }
 
@@ -25,5 +25,5 @@ function test3() {
 }
 
 test1();
-delay();
+// delay();
 console.log("test7");

@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "main": "eventloop.js",
   "scripts": {
-    "test": "mocha $(find . -name '*.test.js') --recursive -w"
+    "test": "mocha $(find . -name '*.test.js') --recursive -w",
+    "async": "MODE=async node ./async.js",
+    "sync": "MODE=sync node ./async.js",
+    "nonblock": "MODE=nonblock node ./blocking.js",
+    "block": "MODE=block node ./blocking.js"
   },
   "author": "",
   "license": "ISC",
