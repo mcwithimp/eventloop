@@ -1,5 +1,10 @@
-function delay() {
-  for (var i = 0; i < 2000000000; ++i);
+const DELAY = 2500;
+function sleep(milliseconds) {
+  const date = Date.now();
+  let currentDate = null;
+  do {
+    currentDate = Date.now();
+  } while (currentDate - date < milliseconds);
 }
 
 function test1() {
@@ -10,13 +15,13 @@ function test1() {
 function test2() {
   let timer = setTimeout(function() {
     console.log("test2");
-    setImmediate(function() {
+    setTimeout(function() {
       console.log("test4");
-    });
-    // delay();
+    }, 0);
+    // sleep(DELAY);
     console.log("test6");
   }, 0);
-  // delay();
+  // sleep(DELAY);
   test3();
 }
 
@@ -25,5 +30,5 @@ function test3() {
 }
 
 test1();
-// delay();
+// sleep(DELAY);
 console.log("test7");
