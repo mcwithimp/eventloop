@@ -25,3 +25,10 @@ if (process.env.MODE == "block") {
 } else {
   nonBlocking();
 }
+
+const promisify = require("util").promisify;
+const _ = promisify(fs.readFile);
+
+async function test() {
+  return await fs.readFile("./blocking.txt");
+}
