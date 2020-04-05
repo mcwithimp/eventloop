@@ -13,15 +13,14 @@ function test1() {
 }
 
 function test2() {
-  let timer = setTimeout(function() {
+  let timer = setTimeout(function cb1() {
     console.log("test2");
-    setTimeout(function() {
+    setTimeout(function cb2() {
       console.log("test4");
     }, 0);
-    // sleep(DELAY);
     console.log("test6");
   }, 0);
-  // sleep(DELAY);
+
   test3();
 }
 

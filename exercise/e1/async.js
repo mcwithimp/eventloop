@@ -7,7 +7,7 @@ function synchronous() {
 function aSynchronous() {
   console.log("1");
   setTimeout(
-    function() {
+    function cb() {
       console.log("2");
     },
 
