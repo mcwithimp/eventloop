@@ -2,13 +2,9 @@ const crypto = require("crypto");
 
 async function test3(passwords) {
   let answer = "";
-  // files 폴더의 각 파일의 내용은 0~9 사이의 숫자 중 하나이다.
-  // start 부터 시작하여 5개의 파일의 내용을 순차적으로 연결(string concat)하여
-  // answer에 저장한다.
-  // 이 때 각 파일의 내용(숫자)은 다음 파일을 가리킨다.
-  // 예시. start는 2이고, file2의 내용은 6, file6의 내용은 3인 경우
-  // file2 => file6 => file3 순으로 파일을 읽고
-  // 그 내용(숫자)을 연결한다.
+  // 사용자의 비밀번호 입력을 받아 이를 암호화 한 결과를 리턴하는 함수를 작성한다.
+  // 암호화는 경우에 따라 복잡한 계산이 필요하므로
+  // 반드시 비동기적으로 구현됭어야 한다.
   // 함수 scrypt의 시그니쳐는 다음과 같다.
   // 주의사항1. 2, 3, 4 파라미터는 그대로 유지할 것
   // crypto.scrypt(password, "salt", 64, { N: 1024 }, function(err, derivedKey) {
