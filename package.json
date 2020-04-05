@@ -3,16 +3,19 @@
   "version": "1.0.0",
   "main": "eventloop.js",
   "scripts": {
-    "test": "mocha $(find . -name '*.test.js') --recursive -w",
-    "async": "MODE=async node ./async.js",
-    "sync": "MODE=sync node ./async.js",
-    "nonblock": "MODE=nonblock node ./blocking.js",
-    "block": "MODE=block node ./blocking.js"
+    "assignment": "mocha $(find ./assignment -name '*.test.js') --recursive -w",
+    "async": "MODE=async node ./exercise/e1/async.js",
+    "sync": "MODE=sync node ./exercise/e1/async.js",
+    "nonblock": "MODE=nonblock node ./exercise/e2/blocking.js",
+    "block": "MODE=block node ./exercise/e2/blocking.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "mocha": "^7.1.1"
+    "express": "^4.17.1",
+    "lowdb": "^1.0.0",
+    "mocha": "^7.1.1",
+    "shortid": "^2.2.15"
   },
   "devDependencies": {},
   "description": ""

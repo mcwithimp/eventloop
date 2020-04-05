@@ -2,7 +2,7 @@ const fs = require("fs");
 
 function blocking() {
   console.log("Before");
-  const data = fs.readFileSync("./blocking.txt");
+  const data = fs.readFileSync(`${__dirname}/blocking.txt`);
   console.log("After");
   console.log("===============");
   console.log(data.toString());
@@ -10,7 +10,7 @@ function blocking() {
 
 function nonBlocking() {
   console.log("Before");
-  const data = fs.readFile("./blocking.txt", function(err, data) {
+  const data = fs.readFile(`${__dirname}/blocking.txt`, function(err, data) {
     console.log("Non-blocking");
     console.log("===============");
     console.log(data.toString());

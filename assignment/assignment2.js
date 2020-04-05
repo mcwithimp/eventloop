@@ -1,6 +1,4 @@
-const { readFile, getRandomNumber, CONTENTS } = require("./utils");
-
-const start = getRandomNumber();
+const { readFile, CONTENTS } = require("./utils");
 
 async function test2(start) {
   let answer = "";
@@ -12,14 +10,10 @@ async function test2(start) {
   // file2 => file6 => file3 순으로 파일을 읽고
   // 그 내용(숫자)을 연결한다.
 
-  let next = start;
-  for (var i = 0; i < 5; i++) {
-    next = await readFile(next);
-    answer += next;
-  }
+  // 여기에 코드를 구현하세요.
+
+  //
   return answer;
 }
 
-module.exports = {
-  test2
-};
+module.exports = test2;
